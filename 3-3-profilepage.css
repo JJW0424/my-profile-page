@@ -86,10 +86,9 @@ body, html {
 
 /* 두번째 페이지 만들기 */
 .section-second-page {
-    /* 처음에는 화면에 보이지 않게 하기 위해 display를 none으로 설정한다. */
+    /* 기존 스타일 유지 */
     display: none;
     position: absolute;
-    /* 가로길이를 모니터 크기만큼 */
     width: 100vw;
     height: 100%;
 }
@@ -110,9 +109,11 @@ body, html {
 }
 
 .menu-nav{
-    position: fixed;
+    position: fixed; /* 항상 화면 상단에 고정 */
     top: 10px;
     left: 450px;
+    z-index: 1000; /* 이 속성을 추가하여 항상 최상단에 보이도록 합니다. */
+    /* 다른 콘텐츠의 z-index보다 높은 값이어야 합니다. */
 }
 
 .menu-nav ul{
@@ -122,6 +123,15 @@ body, html {
     padding: 15px 30px;
     border-radius: 30px;
     box-shadow: 0 0 10px rgba(100, 100, 100, 0.3);
+}
+
+.menu-nav ul li a {
+    color: #A7D9F5; /* 'Profile', 'Project', 'Introduce' 텍스트를 파스텔 블루로 변경합니다. */
+    /* 기존 a{ color: #333; } 이 위에 있다면 이 스타일이 우선 적용됩니다. */
+}
+
+.menu-nav ul li a:hover {
+    color: #89C7E5; /* 호버 시 약간 더 진한 파스텔 블루 */
 }
 
 .section-profile{
