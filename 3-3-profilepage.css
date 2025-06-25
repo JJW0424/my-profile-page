@@ -98,7 +98,7 @@ body, html {
     position: fixed;
     width: 100px; /* 300px에서 100px로 변경 */
     height: 100vh;
-    background-image: url("./image/pastel.jpg");
+    background-image: url("./image/pastel.png");
 }
 
 .section-second-page .block-contents-container{
